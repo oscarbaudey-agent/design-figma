@@ -29,3 +29,9 @@ Read this first, then `docs/DECISIONS.md`. Log each session's work at the bottom
   (`fixtures/make-sample.ts`); found and fixed on the way: rotated text drift, e2e corruption targeting a slide
   that no longer existed (now guarded), test helpers that predated pinned breaks, groups and rotation. Client
   material removed; the first deck's full log stays local in `PROGRESS.local.md` (git-ignored).
+- 2026-10-24: packaged as a Claude Code plugin (single-repo marketplace "design-figma", source "."). SKILL.md uses
+  `${CLAUDE_SKILL_DIR}`; `scripts/setup.ts` installs deps and syncs the Figma plugin to `~/.design-figma/figma-plugin`
+  (installed plugin paths change per version). Verified: `claude plugin validate .` passes; a real install from GitHub
+  into a throwaway config passes setup + 173 tests + selftest + e2e from the cache copy; `${CLAUDE_SKILL_DIR}` resolves
+  for both the plugin and the plain-clone install; setup flags a stale Figma copy (pluginChanged) then settles.
+  No `version` in plugin.json on purpose: every pushed commit is an update.
