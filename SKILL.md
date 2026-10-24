@@ -21,8 +21,10 @@ zero difference as the goal without ever changing the design).
 ## Requirements
 
 macOS with Xcode Command Line Tools, Bun, Google Chrome, Figma desktop, Claude in Chrome (for the archive
-download), and the deck's fonts installed. First use on a machine: `cd scripts && bun install`, then `bun test`
-must pass before converting anything (README.md has the full install).
+download), and the deck's fonts installed. README.md has the install (as a Claude Code plugin or a plain clone).
+
+`${CLAUDE_SKILL_DIR}` below is this skill's own folder (Claude Code fills it in). An installed plugin lives under
+a path that changes with each version: never write lasting state there, never hand that path to Figma.
 
 ## What the user has to do
 
@@ -30,8 +32,8 @@ Only two things, both in **Figma desktop** (the plugin cannot run in the browser
 1. Open or create a **Figma Slides** file. The slides are built into whichever file the
    plugin runs in, so say which file before they start.
 2. Run the plugin: **⌥⌘P** (Plugins → Development → design-figma). First time only:
-   Plugins → Development → Import plugin from manifest →
-   `~/.claude/skills/design-figma/plugin/manifest.json`.
+   Plugins → Development → Import plugin from manifest → the `manifest` path that
+   `setup.ts` prints (normally `~/.design-figma/figma-plugin/manifest.json`).
    The window stays open and polls; no other clicks. **After any change to plugin code,
    they must close it and press ⌥⌘P again** (Figma loads code.js only at start).
 
@@ -40,7 +42,13 @@ reported by the probe; tell the user which ones before building.
 
 ## Steps
 
-Work in a scratch dir `W` (session scratchpad). All commands from `scripts/`.
+Work in a scratch dir `W` (session scratchpad). All commands from `"${CLAUDE_SKILL_DIR}/scripts"`.
+
+0. **Setup** (every conversion, a second when nothing changed): `bun setup.ts`. It installs
+   the script dependencies if missing and syncs the Figma plugin to its fixed folder. Read
+   its JSON: `firstRun: true` → the user imports the printed manifest once (step 2 above);
+   `pluginChanged: true` → the skill was updated, the user must restart the plugin. On a
+   machine's first run, also run `bun test` once; it must pass before converting.
 
 1. **Get the deck archive.** Same route as the design-pdf skill (the request is the
    go-ahead for this one download): open the link in a new Chrome tab, Share →
@@ -91,7 +99,7 @@ Work in a scratch dir `W` (session scratchpad). All commands from `scripts/`.
       red without the fix and prove it red.
    4. Re-extract only those slides (`extract.ts --slides 13,42`, 0-based) into a fresh dir,
       copy their IR json, assets and ref png over `W/ir` and `W/ref`.
-   5. Plugin code changed? `bun run build:plugin` and ask the owner to restart the plugin
+   5. Plugin code changed? `bun run build:plugin && bun setup.ts` and ask the owner to restart the plugin
       (close it, ⌥⌘P). That is the only thing worth interrupting them for.
    6. Rebuild only those slides (`enqueue --kind build --slides 13,42`), re-run check.ts
       on the whole deck (a fix must not move another slide off 0), and go round again.
@@ -130,8 +138,8 @@ Work in a scratch dir `W` (session scratchpad). All commands from `scripts/`.
 
 ## Maintenance
 
-- After editing `plugin/src/*.ts`: `bun run build:plugin`, then the user restarts the
-  plugin. After `plugin/ui-client.ts`: `bun run build-ui.ts`.
+- After editing `plugin/src/*.ts`: `bun run build:plugin`, then `bun setup.ts` (syncs the
+  copy Figma loads), then the user restarts the plugin. After `plugin/ui-client.ts`: `bun run build-ui.ts`.
 - Tests: `bun test` (all files), `bun check.ts --selftest`, `bun e2e-mock.ts` (real
   bridge + real plugin code on a strict mock Figma). All three run on the neutral sample
   deck in `scripts/fixtures/sample` (system fonts, every feature). After an extractor change

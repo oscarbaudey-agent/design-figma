@@ -1,0 +1,14 @@
+{
+  "name": "design-figma",
+  "description": "Private marketplace for the design-figma Claude Code plugin",
+  "owner": {
+    "name": "Oscar Baudey"
+  },
+  "plugins": [
+    {
+      "name": "design-figma",
+      "source": ".",
+      "description": "Claude Design deck to fully editable Figma Slides (macOS, Figma desktop)"
+    }
+  ]
+}

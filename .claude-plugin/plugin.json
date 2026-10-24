@@ -1,0 +1,6 @@
+{
+  "name": "design-figma",
+  "description": "Convert a Claude Design deck into a fully editable Figma Slides file: native text in the deck's fonts, editable shapes, gradients, images and effects, checked slide by slide against the original. macOS, Figma desktop.",
+  "author": { "name": "Oscar Baudey" },
+  "repository": "https://github.com/oscarbaudey-agent/design-figma"
+}

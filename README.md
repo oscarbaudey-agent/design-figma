@@ -16,23 +16,38 @@ is then screenshotted and compared with the original until there is no measurabl
 
 ## Install
 
-```sh
-git clone <this repo> ~/.claude/skills/design-figma
-cd ~/.claude/skills/design-figma/scripts && bun install
+The repo is private: you need read access (ask the owner to add you as a collaborator), and git on your Mac must
+be able to reach it without prompting. With the GitHub CLI: `gh auth login`, then `gh auth setup-git`.
+
+**As a Claude Code plugin (recommended).** In Claude Code:
+
+```
+/plugin install design-figma --marketplace oscarbaudey-agent/design-figma
 ```
 
-It must live at `~/.claude/skills/design-figma`: Claude Code finds skills there, and the instructions point at
-that path. Check the install (about a minute, all must pass):
+(Older Claude Code: `/plugin marketplace add oscarbaudey-agent/design-figma`, then `/plugin install design-figma@design-figma`.)
+Updates: `/plugin`, Installed, design-figma, Update now (or turn on auto-update for the marketplace).
+
+**Or ask Claude.** Paste this into Claude Code: *"Install the Claude Code plugin from
+oscarbaudey-agent/design-figma and run its setup and tests."*
+
+**Or as a plain skill (for working on it):**
 
 ```sh
-cd ~/.claude/skills/design-figma/scripts
-bun test                # 173 tests
-bun check.ts --selftest # the checker goes red on planted faults
-bun e2e-mock.ts         # bridge + plugin on a simulated Figma: clean pass green, corrupted pass red
+git clone https://github.com/oscarbaudey-agent/design-figma ~/.claude/skills/design-figma
 ```
 
-Then, once, in Figma desktop: **Plugins → Development → Import plugin from manifest…** and pick
-`~/.claude/skills/design-figma/plugin/manifest.json`.
+Use one or the other, not both.
+
+**First run.** The skill runs `scripts/setup.ts` on every conversion. It installs its dependencies and copies the
+Figma plugin to `~/.design-figma/figma-plugin`, a folder that never moves. Once, in Figma desktop:
+**Plugins → Development → Import plugin from manifest…** and pick `~/.design-figma/figma-plugin/manifest.json`.
+
+To check an install by hand (from the skill's `scripts` folder; all must pass):
+
+```sh
+bun setup.ts && bun test && bun check.ts --selftest && bun e2e-mock.ts
+```
 
 ## Use
 
@@ -40,7 +55,7 @@ Then, once, in Figma desktop: **Plugins → Development → Import plugin from m
 2. Run the plugin: **⌥⌘P** (Plugins → Development → design-figma). Leave its window open.
 3. In Claude Code, paste the Claude Design link and ask for it in Figma, or type `/design-figma <link>`.
 
-Claude downloads the deck's project archive through Claude in Chrome, extracts every slide, builds them in your
+Claude runs the setup, downloads the deck's project archive through Claude in Chrome, extracts every slide, builds them in your
 file, and keeps checking and fixing until every slide matches. It tells you if it needs the plugin restarted.
 
 ## How it works
