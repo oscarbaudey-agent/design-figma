@@ -1,0 +1,287 @@
+{
+ "_status": "Denim INK and Circular XX Mono entries are UNVERIFIED until probed in Figma. First matching rule wins. weight/wdth accept a number or [min,max]; omitted = any. variable:true means variationSettings (wght, wdth from the IR run) are sent with the font name.",
+ "rules": [
+  {
+   "family": "Denim INK",
+   "italic": false,
+   "figma": {
+    "family": "Denim INK",
+    "style": "Regular"
+   },
+   "variable": true,
+   "axes": [
+    "wght",
+    "wdth"
+   ],
+   "status": "UNVERIFIED until probed in Figma",
+   "note": "Variable TTF (DenimINKTRIALVF). Guess: family loads as Regular and wght/wdth are driven through FontName.variationSettings. Probe with figma.listAvailableFontsAsync + getFontFamilyVariationAxes."
+  },
+  {
+   "family": "Circular XX Mono",
+   "weight": [
+    100,
+    1000
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Circular XX Mono",
+    "style": "Regular"
+   },
+   "variable": false,
+   "status": "UNVERIFIED until probed in Figma",
+   "note": "Static Regular OTF only; any weight maps to Regular (no faux bold)."
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    100,
+    199
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Thin"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    100,
+    199
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Thin Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    200,
+    299
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Extra Light"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    200,
+    299
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Extra Light Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    300,
+    399
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Light"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    300,
+    399
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Light Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    400,
+    499
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Regular"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    400,
+    499
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    500,
+    599
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Medium"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    500,
+    599
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Medium Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    600,
+    699
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Semi Bold"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    600,
+    699
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Semi Bold Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    700,
+    799
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Bold"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    700,
+    799
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Bold Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    800,
+    899
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Extra Bold"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    800,
+    899
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Extra Bold Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    900,
+    1000
+   ],
+   "italic": false,
+   "figma": {
+    "family": "Inter",
+    "style": "Black"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  },
+  {
+   "family": "Inter",
+   "weight": [
+    900,
+    1000
+   ],
+   "italic": true,
+   "figma": {
+    "family": "Inter",
+    "style": "Black Italic"
+   },
+   "variable": false,
+   "status": "standard Figma font"
+  }
+ ]
+}

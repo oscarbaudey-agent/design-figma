@@ -1,0 +1,88 @@
+{
+ "001": {
+  "index": 0,
+  "label": "Cover",
+  "total": 4,
+  "counts": {
+   "text": 3,
+   "image": 1
+  },
+  "native": {},
+  "rasters": 0,
+  "rasterList": [],
+  "scale": 1,
+  "warnings": {}
+ },
+ "002": {
+  "index": 1,
+  "label": "Type",
+  "total": 8,
+  "counts": {
+   "text": 7,
+   "rect": 1
+  },
+  "native": {},
+  "rasters": 0,
+  "rasterList": [],
+  "scale": 1,
+  "warnings": {}
+ },
+ "003": {
+  "index": 2,
+  "label": "Effects",
+  "total": 11,
+  "counts": {
+   "rect": 8,
+   "text": 3
+  },
+  "native": {
+   "effect:noise": 1,
+   "effect:drop-shadow": 2,
+   "effect:inner-shadow": 1,
+   "effect:layer-blur": 1,
+   "effect:background-blur": 1,
+   "blendMode": 1,
+   "rotation": 2
+  },
+  "rasters": 0,
+  "rasterList": [],
+  "scale": 1,
+  "warnings": {}
+ },
+ "004": {
+  "index": 3,
+  "label": "Images",
+  "total": 15,
+  "counts": {
+   "group": 3,
+   "image": 5,
+   "rect": 6,
+   "svg": 1
+  },
+  "native": {
+   "imageFilters": 1,
+   "blendMode": 2,
+   "mask": 2,
+   "tileFill": 1
+  },
+  "rasters": 0,
+  "rasterList": [],
+  "scale": 1,
+  "warnings": {}
+ },
+ "005": {
+  "index": 4,
+  "label": "Shapes",
+  "total": 7,
+  "counts": {
+   "rect": 4,
+   "svg": 1,
+   "text": 2
+  },
+  "native": {},
+  "rasters": 0,
+  "rasterList": [],
+  "scale": 1,
+  "warnings": {}
+ }
+}

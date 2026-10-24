@@ -1,0 +1,122 @@
+{
+ "index": 0,
+ "label": "Cover",
+ "width": 1920,
+ "height": 1080,
+ "background": [
+  {
+   "type": "solid",
+   "color": "#16181D",
+   "opacity": 1
+  }
+ ],
+ "nodes": [
+  {
+   "type": "text",
+   "name": "SAMPLE DECK · 01",
+   "x": 96,
+   "y": 80,
+   "w": 161.75,
+   "h": 16,
+   "characters": "SAMPLE DECK · 01",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 16,
+     "fontFamily": "Menlo",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 14,
+     "lineHeightPx": 16,
+     "letterSpacingPx": 1.68,
+     "color": "#E8E6E1",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "A neutral deck for testing",
+   "x": 96,
+   "y": 299.5,
+   "w": 1100,
+   "h": 240,
+   "characters": "A neutral deck for testing",
+   "lines": [
+    19
+   ],
+   "align": "LEFT",
+   "wrap": true,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 26,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 120,
+     "lineHeightPx": 120,
+     "letterSpacingPx": -2.4,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Every feature the converter maps, in sys",
+   "x": 96,
+   "y": 599.6,
+   "w": 700,
+   "h": 75.6,
+   "characters": "Every feature the converter maps, in system fonts, so it renders the same on any Mac.",
+   "lines": [
+    57
+   ],
+   "align": "LEFT",
+   "wrap": true,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 85,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 28,
+     "lineHeightPx": 37.8,
+     "letterSpacingPx": 0,
+     "color": "#B9B6AE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "image",
+   "name": "cover-photo",
+   "x": 1300,
+   "y": 240,
+   "w": 520,
+   "h": 600,
+   "scaleMode": "FILL",
+   "opacity": 1,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "ref": "assets/ff9c33f6fb9fd4fa.png"
+  }
+ ]
+}

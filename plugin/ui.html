@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>design-figma</title>
+<style>
+  body { font: 12px/1.4 -apple-system, system-ui, sans-serif; margin: 12px; color: #222; }
+  #status { padding: 8px; border-radius: 6px; background: #eee; word-break: break-word; }
+  #status[data-state=building], #status[data-state=exporting], #status[data-state=probing] { background: #dbeafe; }
+  #status[data-state=idle] { background: #dcfce7; }
+  #status[data-state=offline] { background: #fee2e2; }
+</style></head>
+<body><div id="status">starting</div>
+<script>
+(() => {
+  // ../plugin/ui-client.ts
+  function collectImageRefs(ir) {
+    const refs = new Set;
+    const walk = (v) => {
+      if (Array.isArray(v))
+        return v.forEach(walk);
+      if (v && typeof v === "object") {
+        if (v.type === "image" && typeof v.ref === "string")
+          refs.add(v.ref);
+        for (const k in v)
+          walk(v[k]);
+      }
+    };
+    walk(ir);
+    return [...refs];
+  }
+  function createClient(opts) {
+    const f = opts.fetchFn ?? ((...a) => fetch(...a));
+    const sleep = opts.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
+    const base = opts.base.replace(/\/$/, "");
+    let lastError;
+    const status = (state, text) => opts.onStatus?.({ state, text, lastError });
+    const fail = (msg) => {
+      lastError = msg;
+    };
+    async function post(path, body, contentType = "application/json") {
+      const r = await f(base + path, {
+        method: "POST",
+        headers: { "Content-Type": contentType },
+        body: contentType === "application/json" ? JSON.stringify(body) : body
+      });
+      if (!r.ok)
+        throw new Error(`POST ${path} -> ${r.status}`);
+    }
+    const log = (level, msg) => post("/log", { level, msg }).catch(() => {});
+    async function getBytes(path) {
+      const r = await f(base + path);
+      if (!r.ok)
+        throw new Error(`GET ${path} -> ${r.status}`);
+      return new Uint8Array(await r.arrayBuffer());
+    }
+    async function fetchImages(ir) {
+      const images = {};
+      for (const ref of collectImageRefs(ir)) {
+        images[ref] = await getBytes("/asset/" + ref.split("/").map(encodeURIComponent).join("/"));
+      }
+      return images;
+    }
+    async function exportShot(job, index, scale) {
+      status("exporting", `exporting slide ${index + 1}`);
+      const png = await opts.bridge.call({ type: "export", index, scale }, "png");
+      await post(`/shot/${job.jobId}/${index}`, png.bytes, "image/png");
+    }
+    async function processSlide(job, s, errors) {
+      try {
+        if (job.kind === "export") {
+          await exportShot(job, s.index, job.options?.exportScale ?? 1);
+          return;
+        }
+        status("building", `building slide ${s.index + 1}`);
+        const ir = await (await f(`${base}/ir/${s.file}`)).json();
+        const images = await fetchImages(ir);
+        const built = await opts.bridge.call({ type: "build", ir, images, removeBlank: !!job.options?.removeBlank }, "built");
+        await post(`/report/${job.jobId}/${s.index}`, built.report);
+        if (job.options?.exportScale)
+          await exportShot(job, s.index, job.options.exportScale);
+      } catch (e) {
+        const msg = `slide ${s.index}: ${e?.message ?? e}`;
+        errors.push(msg);
+        fail(msg);
+        await log("error", msg);
+      }
+    }
+    async function processJob(job) {
+      const errors = [];
+      if (job.kind === "probe") {
+        status("probing", "probing fonts");
+        try {
+          const families = job.options?.families ?? [];
+          const res = await opts.bridge.call({ type: "probe", families }, "probe-result");
+          await post(`/report/${job.jobId}/0`, res);
+        } catch (e) {
+          errors.push(String(e?.message ?? e));
+          fail(errors[0]);
+        }
+      } else if (job.kind === "remove") {
+        status("building", `removing ${job.slides.length} slide(s)`);
+        try {
+          const res = await opts.bridge.call({ type: "remove", indices: job.slides.map((s) => s.index) }, "removed");
+          if (res.missing && res.missing.length) {
+            const m = `remove: no tagged slide with index ${res.missing.join(",")}`;
+            errors.push(m);
+            fail(m);
+          }
+        } catch (e) {
+          errors.push(String(e?.message ?? e));
+          fail(errors[errors.length - 1]);
+        }
+      } else {
+        for (const s of job.slides)
+          await processSlide(job, s, errors);
+      }
+      const result = { ok: errors.length === 0, errors };
+      try {
+        await post(`/done/${job.jobId}`, result);
+      } catch (e) {
+        fail(`done: ${e?.message ?? e}`);
+      }
+      status("idle", `job ${job.jobId} ${result.ok ? "done" : "finished with errors"}`);
+      return result;
+    }
+    async function pollOnce() {
+      let r;
+      try {
+        r = await f(base + "/job");
+      } catch (e) {
+        status("offline", `server unreachable (${base})`);
+        return null;
+      }
+      if (r.status === 204) {
+        status("idle", "connected, idle");
+        return null;
+      }
+      if (!r.ok) {
+        fail(`GET /job -> ${r.status}`);
+        status("offline", `server error ${r.status}`);
+        return null;
+      }
+      const job = await r.json();
+      const res = await processJob(job);
+      return { job, ...res };
+    }
+    async function loop(shouldStop = () => false) {
+      status("connecting", "connecting");
+      while (!shouldStop()) {
+        try {
+          const did = await pollOnce();
+          if (did)
+            continue;
+        } catch (e) {
+          fail(String(e?.message ?? e));
+          status("offline", "client error");
+        }
+        await sleep(opts.pollMs ?? 1500);
+      }
+    }
+    return { pollOnce, processJob, loop };
+  }
+  function startUiClient(base = "http://localhost:4747") {
+    const el = document.getElementById("status");
+    const pending = [];
+    window.onmessage = (ev) => {
+      const m = ev.data && ev.data.pluginMessage;
+      if (!m)
+        return;
+      const p = pending.shift();
+      if (!p)
+        return;
+      if (m.type === "error")
+        p.reject(new Error(m.msg));
+      else if (m.type === p.replyType)
+        p.resolve(m);
+      else {
+        pending.unshift(p);
+      }
+    };
+    const bridge = {
+      call(msg, replyType) {
+        return new Promise((resolve, reject) => {
+          pending.push({ replyType, resolve, reject });
+          parent.postMessage({ pluginMessage: msg }, "*");
+        });
+      }
+    };
+    const client = createClient({
+      base,
+      bridge,
+      onStatus: (s) => {
+        el.textContent = s.text + (s.lastError ? `  |  last error: ${s.lastError}` : "");
+        el.dataset.state = s.state;
+      }
+    });
+    client.loop();
+  }
+
+  // ../plugin/src/ui-entry.ts
+  startUiClient();
+})();
+
+</script></body></html>

@@ -1,0 +1,349 @@
+{
+ "index": 1,
+ "label": "Type",
+ "width": 1920,
+ "height": 1080,
+ "background": [
+  {
+   "type": "solid",
+   "color": "#F6F4EF",
+   "opacity": 1
+  }
+ ],
+ "nodes": [
+  {
+   "type": "text",
+   "name": "Type and runs",
+   "x": 96,
+   "y": 97,
+   "w": 425.61,
+   "h": 76,
+   "characters": "Type and runs",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 13,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 64,
+     "lineHeightPx": 76,
+     "letterSpacingPx": 0,
+     "color": "#16181D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "A paragraph with a bold run, an italic r",
+   "x": 96,
+   "y": 239.3,
+   "w": 760,
+   "h": 72.79,
+   "characters": "A paragraph with a bold run, an italic run, a coloured run and an underline, wrapping onto several lines inside a fixed width box.",
+   "lines": [
+    66
+   ],
+   "align": "LEFT",
+   "wrap": true,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 19,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 19,
+     "end": 27,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 27,
+     "end": 32,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 32,
+     "end": 42,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": true,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 42,
+     "end": 46,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 46,
+     "end": 58,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#D6336C",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 58,
+     "end": 63,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    },
+    {
+     "start": 63,
+     "end": 75,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "UNDERLINE"
+    },
+    {
+     "start": 75,
+     "end": 130,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 26,
+     "lineHeightPx": 36.4,
+     "letterSpacingPx": 0,
+     "color": "#33363D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Centred, medium weight, two lines exactl",
+   "x": 1018.75,
+   "y": 240,
+   "w": 782.48,
+   "h": 48,
+   "characters": "Centred, medium weight, two lines exactly",
+   "align": "CENTER",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 41,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 500,
+     "italic": false,
+     "fontSize": 40,
+     "lineHeightPx": 48,
+     "letterSpacingPx": 0,
+     "color": "#16181D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "dark-card",
+   "x": 1000,
+   "y": 560,
+   "w": 820,
+   "h": 360,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#16181D",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "text",
+   "name": "1.1 · SMALL LIGHT TEXT",
+   "x": 1040,
+   "y": 600,
+   "w": 180.06,
+   "h": 14,
+   "characters": "1.1 · SMALL LIGHT TEXT",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 22,
+     "fontFamily": "Menlo",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 12,
+     "lineHeightPx": 14,
+     "letterSpacingPx": 0.96,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "1.2 · ON A DARK GROUND",
+   "x": 1040,
+   "y": 624,
+   "w": 180.06,
+   "h": 14,
+   "characters": "1.2 · ON A DARK GROUND",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 22,
+     "fontFamily": "Menlo",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 12,
+     "lineHeightPx": 14,
+     "letterSpacingPx": 0.96,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Light headline on dark",
+   "x": 1040,
+   "y": 699.3,
+   "w": 467.64,
+   "h": 48.4,
+   "characters": "Light headline on dark",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 22,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 44,
+     "lineHeightPx": 48.4,
+     "letterSpacingPx": 0,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "02",
+   "x": 96,
+   "y": 980,
+   "w": 16.86,
+   "h": 16,
+   "characters": "02",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 2,
+     "fontFamily": "Menlo",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 14,
+     "lineHeightPx": 16,
+     "letterSpacingPx": 0,
+     "color": "#6B6E75",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  }
+ ]
+}

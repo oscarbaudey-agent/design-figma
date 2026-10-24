@@ -1,0 +1,10 @@
+{
+  "name": "design-figma",
+  "private": true,
+  "dependencies": {
+    "playwright": "^1.64.1"
+  },
+  "scripts": {
+    "build:plugin": "bun build ../plugin/src/code.ts --outfile ../plugin/code.js --format=iife --target=browser"
+  }
+}

@@ -1,0 +1,299 @@
+{
+ "index": 3,
+ "label": "Images",
+ "width": 1920,
+ "height": 1080,
+ "background": [
+  {
+   "type": "solid",
+   "color": "#F6F4EF",
+   "opacity": 1
+  }
+ ],
+ "nodes": [
+  {
+   "type": "group",
+   "name": "tone toned",
+   "x": 96,
+   "y": 96,
+   "w": 400,
+   "h": 400,
+   "children": [
+    {
+     "type": "image",
+     "name": "toned",
+     "x": 96,
+     "y": 96,
+     "w": 400,
+     "h": 400,
+     "scaleMode": "FILL",
+     "opacity": 1,
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "filters": {
+      "saturation": -1
+     },
+     "ref": "assets/ff9c33f6fb9fd4fa.png"
+    },
+    {
+     "type": "rect",
+     "name": "tone multiply",
+     "x": 96,
+     "y": 96,
+     "w": 400,
+     "h": 400,
+     "fills": [
+      {
+       "type": "solid",
+       "color": "#F1E1C4",
+       "opacity": 1
+      }
+     ],
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "stroke": null,
+     "opacity": 1,
+     "blendMode": "MULTIPLY"
+    },
+    {
+     "type": "rect",
+     "name": "tone screen",
+     "x": 96,
+     "y": 96,
+     "w": 400,
+     "h": 400,
+     "fills": [
+      {
+       "type": "solid",
+       "color": "#1A2659",
+       "opacity": 1
+      }
+     ],
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "stroke": null,
+     "opacity": 1,
+     "blendMode": "SCREEN"
+    }
+   ],
+   "blendMode": "NORMAL",
+   "opacity": 1
+  },
+  {
+   "type": "image",
+   "name": "stretched",
+   "x": 600,
+   "y": 96,
+   "w": 520,
+   "h": 200,
+   "scaleMode": "STRETCH",
+   "opacity": 1,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "ref": "assets/ff9c33f6fb9fd4fa.png"
+  },
+  {
+   "type": "image",
+   "name": "squashed",
+   "x": 600,
+   "y": 360,
+   "w": 320,
+   "h": 120,
+   "scaleMode": "STRETCH",
+   "opacity": 1,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "ref": "assets/ff9c33f6fb9fd4fa.png"
+  },
+  {
+   "type": "rect",
+   "name": "contained",
+   "x": 1220,
+   "y": 96,
+   "w": 600,
+   "h": 300,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#16181D",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "clipsContent": true
+  },
+  {
+   "type": "image",
+   "name": "contained",
+   "x": 1220,
+   "y": 96,
+   "w": 600,
+   "h": 300,
+   "scaleMode": "FIT",
+   "opacity": 1,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "ref": "assets/ff9c33f6fb9fd4fa.png"
+  },
+  {
+   "type": "group",
+   "name": "mask masked",
+   "x": 96,
+   "y": 600,
+   "w": 400,
+   "h": 400,
+   "mask": true,
+   "children": [
+    {
+     "type": "rect",
+     "name": "mask",
+     "x": 96,
+     "y": 600,
+     "w": 400,
+     "h": 400,
+     "fills": [
+      {
+       "type": "radial",
+       "stops": [
+        {
+         "pos": 0.6,
+         "color": "#000000",
+         "opacity": 1
+        },
+        {
+         "pos": 0.61,
+         "color": "#000000",
+         "opacity": 0
+        }
+       ]
+      }
+     ],
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "stroke": null,
+     "opacity": 1
+    },
+    {
+     "type": "image",
+     "name": "masked",
+     "x": 96,
+     "y": 600,
+     "w": 400,
+     "h": 400,
+     "scaleMode": "FILL",
+     "opacity": 1,
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "ref": "assets/ff9c33f6fb9fd4fa.png"
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "dots",
+   "x": 600,
+   "y": 700,
+   "w": 720,
+   "h": 24,
+   "fills": [
+    {
+     "type": "image",
+     "ref": "assets/349e6876870e319c.png",
+     "scaleMode": "TILE",
+     "scalingFactor": 0.25
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "group",
+   "name": "mask round",
+   "x": 1420,
+   "y": 600,
+   "w": 300,
+   "h": 300,
+   "mask": true,
+   "children": [
+    {
+     "type": "svg",
+     "name": "mask",
+     "x": 1420,
+     "y": 600,
+     "w": 300,
+     "h": 300,
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\"><circle cx=\"150\" cy=\"150\" r=\"150\" fill=\"#000\"/></svg>",
+     "opacity": 1
+    },
+    {
+     "type": "rect",
+     "name": "round",
+     "x": 1420,
+     "y": 600,
+     "w": 300,
+     "h": 300,
+     "fills": [
+      {
+       "type": "solid",
+       "color": "#7048E8",
+       "opacity": 1
+      }
+     ],
+     "radius": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "stroke": null,
+     "opacity": 1
+    }
+   ]
+  }
+ ]
+}

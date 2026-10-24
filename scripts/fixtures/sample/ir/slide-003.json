@@ -1,0 +1,352 @@
+{
+ "index": 2,
+ "label": "Effects",
+ "width": 1920,
+ "height": 1080,
+ "background": [
+  {
+   "type": "solid",
+   "color": "#FFFFFF",
+   "opacity": 1
+  }
+ ],
+ "nodes": [
+  {
+   "type": "rect",
+   "name": "grain",
+   "x": 96,
+   "y": 96,
+   "w": 560,
+   "h": 400,
+   "fills": [
+    {
+     "type": "linear",
+     "angleDeg": 144.46,
+     "stops": [
+      {
+       "pos": 0,
+       "color": "#FF7A59",
+       "opacity": 1
+      },
+      {
+       "pos": 1,
+       "color": "#7048E8",
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "effects": [
+    {
+     "type": "noise",
+     "baseFrequency": 0.85,
+     "octaves": 2,
+     "seed": 7,
+     "amount": 0.135,
+     "bias": -0.013,
+     "blend": "MULTIPLY",
+     "monochrome": true
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "shadow-card",
+   "x": 760,
+   "y": 120,
+   "w": 400,
+   "h": 240,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#FFFFFF",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "effects": [
+    {
+     "type": "drop-shadow",
+     "color": "#000000",
+     "opacity": 0.25,
+     "x": 0,
+     "y": 12,
+     "blur": 32,
+     "spread": 0
+    },
+    {
+     "type": "inner-shadow",
+     "color": "#E03131",
+     "opacity": 1,
+     "x": 0,
+     "y": 0,
+     "blur": 0,
+     "spread": 2
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Shadow card",
+   "x": 792,
+   "y": 152,
+   "w": 175.28,
+   "h": 33,
+   "characters": "Shadow card",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 11,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 28,
+     "lineHeightPx": 33,
+     "letterSpacingPx": 0,
+     "color": "#16181D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "blur-blob",
+   "x": 1300,
+   "y": 120,
+   "w": 260,
+   "h": 260,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#20C997",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    130,
+    130,
+    130,
+    130
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "effects": [
+    {
+     "type": "layer-blur",
+     "radius": 36
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "glass",
+   "x": 1360,
+   "y": 220,
+   "w": 400,
+   "h": 200,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#FFFFFF",
+     "opacity": 0.35
+    }
+   ],
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "effects": [
+    {
+     "type": "background-blur",
+     "radius": 20
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Backdrop blur",
+   "x": 1384,
+   "y": 244,
+   "w": 152.05,
+   "h": 28,
+   "characters": "Backdrop blur",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 13,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 400,
+     "italic": false,
+     "fontSize": 24,
+     "lineHeightPx": 28,
+     "letterSpacingPx": 0,
+     "color": "#16181D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "rect",
+   "name": "multiply",
+   "x": 160,
+   "y": 620,
+   "w": 300,
+   "h": 220,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#FAB005",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "blendMode": "MULTIPLY"
+  },
+  {
+   "type": "rect",
+   "name": "under",
+   "x": 300,
+   "y": 560,
+   "w": 300,
+   "h": 220,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#4DABF7",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "rect",
+   "name": "rotated",
+   "x": 820,
+   "y": 620,
+   "w": 340,
+   "h": 160,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#16181D",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "rotation": -8
+  },
+  {
+   "type": "text",
+   "name": "Rotated",
+   "x": 848.09,
+   "y": 681.24,
+   "w": 151.84,
+   "h": 48,
+   "characters": "Rotated",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 7,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 40,
+     "lineHeightPx": 48,
+     "letterSpacingPx": 0,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ],
+   "rotation": -8
+  },
+  {
+   "type": "rect",
+   "name": "drop",
+   "x": 1360,
+   "y": 620,
+   "w": 300,
+   "h": 180,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#E64980",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "stroke": null,
+   "opacity": 1,
+   "effects": [
+    {
+     "type": "drop-shadow",
+     "color": "#000000",
+     "opacity": 0.4,
+     "x": 0,
+     "y": 8,
+     "blur": 20,
+     "spread": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+node_modules/
+scripts/.bin/
+PROGRESS.local.md
+*.local.*
+.DS_Store
+scripts/fixtures/sample/ir/__preview.html

@@ -1,0 +1,193 @@
+{
+ "index": 4,
+ "label": "Shapes",
+ "width": 1920,
+ "height": 1080,
+ "background": [
+  {
+   "type": "solid",
+   "color": "#16181D",
+   "opacity": 1
+  }
+ ],
+ "nodes": [
+  {
+   "type": "rect",
+   "name": "linear",
+   "x": 96,
+   "y": 96,
+   "w": 520,
+   "h": 300,
+   "fills": [
+    {
+     "type": "linear",
+     "angleDeg": 135,
+     "stops": [
+      {
+       "pos": 0,
+       "color": "#FF922B",
+       "opacity": 1
+      },
+      {
+       "pos": 1,
+       "color": "#F03E3E",
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "rect",
+   "name": "radial",
+   "x": 700,
+   "y": 96,
+   "w": 520,
+   "h": 300,
+   "fills": [
+    {
+     "type": "radial",
+     "stops": [
+      {
+       "pos": 0,
+       "color": "#63E6BE",
+       "opacity": 1
+      },
+      {
+       "pos": 1,
+       "color": "#1864AB",
+       "opacity": 1
+      }
+     ]
+    }
+   ],
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "rect",
+   "name": "outline",
+   "x": 1300,
+   "y": 96,
+   "w": 528,
+   "h": 308,
+   "fills": [],
+   "radius": [
+    40,
+    0,
+    40,
+    0
+   ],
+   "stroke": {
+    "color": "#F4F2EE",
+    "opacity": 1,
+    "width": 4,
+    "align": "INSIDE"
+   },
+   "opacity": 1
+  },
+  {
+   "type": "svg",
+   "name": "icon",
+   "x": 96,
+   "y": 520,
+   "w": 200,
+   "h": 200,
+   "svg": "<svg data-name=\"icon\" width=\"200\" height=\"200\" viewBox=\"0 0 24 24\" fill=\"rgb(0, 0, 0)\" stroke=\"none\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><path d=\"M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z\" fill=\"rgb(255, 212, 59)\" stroke=\"none\"/></svg>",
+   "opacity": 1
+  },
+  {
+   "type": "rect",
+   "name": "pill",
+   "x": 400,
+   "y": 580,
+   "w": 148.95,
+   "h": 56,
+   "fills": [
+    {
+     "type": "solid",
+     "color": "#F4F2EE",
+     "opacity": 1
+    }
+   ],
+   "radius": [
+    28,
+    28,
+    28,
+    28
+   ],
+   "stroke": null,
+   "opacity": 1
+  },
+  {
+   "type": "text",
+   "name": "Pill label",
+   "x": 428,
+   "y": 593.5,
+   "w": 92.95,
+   "h": 28,
+   "characters": "Pill label",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 10,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 500,
+     "italic": false,
+     "fontSize": 24,
+     "lineHeightPx": 28,
+     "letterSpacingPx": 0,
+     "color": "#16181D",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "name": "Shapes and gradients",
+   "x": 96,
+   "y": 820,
+   "w": 746.72,
+   "h": 72,
+   "characters": "Shapes and gradients",
+   "align": "LEFT",
+   "wrap": false,
+   "opacity": 1,
+   "runs": [
+    {
+     "start": 0,
+     "end": 20,
+     "fontFamily": "Helvetica Neue",
+     "fontWeight": 700,
+     "italic": false,
+     "fontSize": 72,
+     "lineHeightPx": 72,
+     "letterSpacingPx": 0,
+     "color": "#F4F2EE",
+     "colorOpacity": 1,
+     "variation": {},
+     "decoration": "NONE"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "index": 0,
+  "label": "001 Sample",
+  "width": 1920,
+  "height": 1080,
+  "background": [{ "type": "solid", "color": "#0A0A0A", "opacity": 1 }],
+  "nodes": [
+    { "type": "rect", "name": "gradient card", "x": 100, "y": 100, "w": 800, "h": 400,
+      "fills": [{ "type": "linear", "angleDeg": 135, "stops": [
+        { "pos": 0, "color": "#FF3D00", "opacity": 1 }, { "pos": 1, "color": "#FFC400", "opacity": 0.8 } ] }],
+      "radius": [24, 24, 0, 0], "stroke": { "color": "#FFFFFF", "opacity": 0.5, "width": 2, "align": "INSIDE" }, "opacity": 1 },
+    { "type": "rect", "name": "radial glow", "x": 1000, "y": 100, "w": 400, "h": 400,
+      "fills": [{ "type": "radial", "stops": [
+        { "pos": 0, "color": "#FFFFFF", "opacity": 1 }, { "pos": 1, "color": "#FFFFFF", "opacity": 0 } ] }],
+      "radius": [200, 200, 200, 200], "stroke": null, "opacity": 0.9 },
+    { "type": "rect", "name": "image fill", "x": 1500, "y": 100, "w": 300, "h": 300,
+      "fills": [{ "type": "image", "ref": "assets/pixel.png", "scaleMode": "FILL" }],
+      "radius": [0, 0, 0, 0], "stroke": null, "opacity": 1 },
+    { "type": "text", "name": "headline", "x": 100, "y": 560, "w": 900, "h": 240,
+      "characters": "BRAND BOOK 2026", "align": "LEFT", "wrap": true, "opacity": 1,
+      "runs": [
+        { "start": 0, "end": 5, "fontFamily": "Denim INK", "fontWeight": 700, "italic": false, "fontSize": 120,
+          "lineHeightPx": 120, "letterSpacingPx": -2.4, "color": "#FFFFFF", "colorOpacity": 1,
+          "variation": { "wght": 700, "wdth": 150 }, "decoration": "NONE" },
+        { "start": 5, "end": 10, "fontFamily": "Denim INK", "fontWeight": 700, "italic": false, "fontSize": 120,
+          "lineHeightPx": 120, "letterSpacingPx": -2.4, "color": "#FFFFFF", "colorOpacity": 1,
+          "variation": { "wght": 700, "wdth": 150 }, "decoration": "NONE" },
+        { "start": 10, "end": 15, "fontFamily": "Denim INK", "fontWeight": 700, "italic": false, "fontSize": 120,
+          "lineHeightPx": 120, "letterSpacingPx": -2.4, "color": "#FF3D00", "colorOpacity": 1,
+          "variation": { "wght": 700, "wdth": 150 }, "decoration": "UNDERLINE" }
+      ] },
+    { "type": "text", "name": "caption centred", "x": 100, "y": 900, "w": 600, "h": 30,
+      "characters": "Circular mono caption", "align": "CENTER", "wrap": false, "opacity": 0.7,
+      "runs": [
+        { "start": 0, "end": 21, "fontFamily": "Circular XX Mono", "fontWeight": 400, "italic": false, "fontSize": 24,
+          "lineHeightPx": 30, "letterSpacingPx": 0, "color": "#CCCCCC", "colorOpacity": 0.8, "decoration": "NONE" }
+      ] },
+    { "type": "svg", "name": "dots", "x": 1000, "y": 600, "w": 100, "h": 100,
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"#FF3D00\"/></svg>", "opacity": 1 },
+    { "type": "image", "name": "photo", "x": 1200, "y": 600, "w": 400, "h": 300, "ref": "assets/pixel.png",
+      "scaleMode": "FILL", "opacity": 1, "radius": [16, 16, 16, 16] }
+  ]
+}

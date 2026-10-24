@@ -1,0 +1,14 @@
+{
+  "name": "design-figma",
+  "id": "design-figma-dev",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["slides"],
+  "networkAccess": {
+    "allowedDomains": ["none"],
+    "devAllowedDomains": ["http://localhost:4747"],
+    "reasoning": "Fetches slide data from a local converter server"
+  },
+  "documentAccess": "dynamic-page"
+}
