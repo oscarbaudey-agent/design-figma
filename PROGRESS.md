@@ -35,3 +35,4 @@ Read this first, then `docs/DECISIONS.md`. Log each session's work at the bottom
   into a throwaway config passes setup + 173 tests + selftest + e2e from the cache copy; `${CLAUDE_SKILL_DIR}` resolves
   for both the plugin and the plain-clone install; setup flags a stale Figma copy (pluginChanged) then settles.
   No `version` in plugin.json on purpose: every pushed commit is an update.
+- 2026-10-25: repo made public under MIT (D-013); README drops the private-access steps.

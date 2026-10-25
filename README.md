@@ -16,9 +16,6 @@ is then screenshotted and compared with the original until there is no measurabl
 
 ## Install
 
-The repo is private: you need read access (ask the owner to add you as a collaborator), and git on your Mac must
-be able to reach it without prompting. With the GitHub CLI: `gh auth login`, then `gh auth setup-git`.
-
 **As a Claude Code plugin (recommended).** In Claude Code:
 
 ```
@@ -70,3 +67,7 @@ no rasters, pinned line breaks, zero difference without changing the design). `P
 - `scripts/check.ts`: nine checks per slide (pixels, text, line breaks, images, fills, geometry, fonts, editable,
   effects) and the measurable-difference score.
 - `scripts/fixtures/sample`: a neutral five-slide deck the tests run on (`bun fixtures/make-sample.ts` rebuilds it).
+
+## License
+
+MIT. See `LICENSE`.

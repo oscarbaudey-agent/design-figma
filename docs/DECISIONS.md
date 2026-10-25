@@ -95,3 +95,8 @@ only as a renderer-only residue: all nine checks pass, its nodes match the IR, a
 Chrome and Figma rasterise (e.g. Chrome's macOS thickening of small light-on-dark text). Such slides go in
 <out>/accepted.json with their measured score as a ceiling and a reason; check.ts counts them as done and
 turns them OPEN again if the score ever rises above the ceiling. First real deck: 79 at 0, 9 accepted.
+
+## D-013 Public repo, MIT license (owner, 2026-10-25)
+The repo goes public under MIT so anyone can install the plugin without a collaborator invite or git
+credentials. Checked first: the full git history holds no client material, fonts or personal paths (only the
+generated sample deck); the commit author email is public as a result, accepted.
