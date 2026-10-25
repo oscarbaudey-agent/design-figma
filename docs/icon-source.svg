@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1B22"/><stop offset="1" stop-color="#0E0E12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#g)"/>
+  <!-- back slide (the original deck) -->
+  <rect x="236" y="250" width="600" height="400" rx="28" fill="#3A3946"/>
+  <!-- front slide -->
+  <rect x="188" y="330" width="648" height="436" rx="30" fill="#F4F1EA"/>
+  <!-- headline bar -->
+  <rect x="256" y="424" width="340" height="56" rx="10" fill="#17161C"/>
+  <!-- body lines -->
+  <rect x="256" y="530" width="460" height="22" rx="11" fill="#B9B4A8"/>
+  <rect x="256" y="574" width="380" height="22" rx="11" fill="#B9B4A8"/>
+  <!-- image block -->
+  <rect x="256" y="636" width="150" height="72" rx="10" fill="#FF6A3D"/>
+  <!-- selection box around headline -->
+  <rect x="236" y="404" width="380" height="96" fill="none" stroke="#3D7BFF" stroke-width="8"/>
+  <g fill="#FFFFFF" stroke="#3D7BFF" stroke-width="7">
+    <rect x="222" y="390" width="28" height="28"/><rect x="602" y="390" width="28" height="28"/>
+    <rect x="222" y="486" width="28" height="28"/><rect x="602" y="486" width="28" height="28"/>
+  </g>
+</svg>
